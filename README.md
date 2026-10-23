@@ -1,24 +1,20 @@
-# Clínica Vital Service 📚
+# Clínica Vital Service
 
-Proyecto académico desarrollado en 2025 para la **Evaluación 2 de Backend**.  
-Este sistema representa una aplicación web de gestión clínica enfocada en el registro y administración de información médica básica.
+Aplicación web académica para la gestión de información clínica mediante Django, operaciones CRUD, API REST y documentación interactiva.
 
-## 👥 Autor
+Proyecto desarrollado en **2025** para la **Evaluación 2 de Backend**.
 
-**Matías Gajardo**
+## Autor
 
-Este proyecto fue realizado **individualmente** como parte del proceso de aprendizaje en desarrollo backend con Django.
+- Matías Gajardo
 
-## 🧩 Descripción del proyecto
+Proyecto desarrollado individualmente como parte del proceso formativo en desarrollo backend con Django.
 
-Clínica Vital es un proyecto académico **funcional, pero muy básico**, creado en una etapa inicial de aprendizaje para practicar:
+## Descripción del proyecto
 
-- Modelado de datos relacionales en Django.
-- Operaciones CRUD con formularios y vistas.
-- Exposición de endpoints con Django REST Framework.
-- Navegación por plantillas HTML.
+Clínica Vital permite administrar información básica de un flujo médico mediante modelos relacionales, formularios, vistas web y endpoints REST.
 
-El sistema permite gestionar las entidades principales de un flujo médico simple:
+El sistema gestiona las siguientes entidades:
 
 - Especialidades médicas.
 - Médicos.
@@ -28,34 +24,34 @@ El sistema permite gestionar las entidades principales de un flujo médico simpl
 - Medicamentos.
 - Recetas médicas.
 
-También incluye documentación automática de API con Swagger y ReDoc.
+También incorpora documentación automática de la API mediante Swagger y ReDoc.
 
-## ✨ Características principales
+## Características principales
 
-- CRUD completo en interfaz web para las entidades del sistema.
-- Formularios basados en `ModelForm` para crear y editar registros.
-- Vistas basadas en funciones (FBV) para listado, creación, edición y eliminación.
-- API REST por entidad con `ModelViewSet` y `DefaultRouter`.
-- Documentación de API disponible en Swagger (`/swagger/`) y ReDoc (`/redoc/`).
-- Estructura simple y clara, adecuada para aprendizaje.
+- Operaciones CRUD desde la interfaz web.
+- Formularios basados en `ModelForm`.
+- Vistas basadas en funciones para listado, creación, edición y eliminación.
+- API REST por entidad mediante `ModelViewSet` y `DefaultRouter`.
+- Documentación de API disponible en Swagger y ReDoc.
+- Organización de una aplicación Django orientada a la gestión de datos clínicos.
 
-## 🛠️ Stack tecnológico
+## Tecnologías
 
 - Python 3.13
 - Django 6.0.3
 - Django REST Framework
-- drf-yasg (Swagger/ReDoc)
+- drf-yasg
 - HTML, CSS y plantillas Django
-- SQLite (base de datos por defecto de este repositorio)
-- PostgreSQL (motor utilizado en una fase previa del proyecto)
+- SQLite para ejecución local
+- PostgreSQL utilizado en una etapa previa del proyecto
 
-## 🗂️ Estructura del proyecto
+## Estructura del proyecto
 
-- `clinica_vital`: configuración principal del proyecto (settings, urls, wsgi, asgi).
-- `gestion`: app principal con modelos, formularios, vistas, serializers y rutas.
-- `gestion/templates/gestion`: plantillas para menú y vistas CRUD.
+- `clinica_vital`: configuración principal del proyecto Django.
+- `gestion`: aplicación principal con modelos, formularios, vistas, serializadores y rutas.
+- `gestion/templates/gestion`: plantillas para el menú y las vistas CRUD.
 
-## 🚀 Puesta en marcha local
+## Puesta en marcha local
 
 ### 1. Clonar el repositorio
 
@@ -64,7 +60,7 @@ git clone <url-del-repositorio>
 cd Clinica-Vital
 ```
 
-### 2. Crear y activar entorno virtual (Windows PowerShell)
+### 2. Crear y activar el entorno virtual
 
 ```powershell
 python -m venv env
@@ -83,31 +79,26 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
-### 5. Iniciar servidor
+### 5. Iniciar el servidor
 
 ```powershell
 python manage.py runserver
 ```
 
-## 🌐 Rutas útiles
+## Rutas principales
 
-- `http://127.0.0.1:8000/` Menú principal de la aplicación.
-- `http://127.0.0.1:8000/admin/` Panel de administración Django.
-- `http://127.0.0.1:8000/gestion/api/` Endpoints REST.
-- `http://127.0.0.1:8000/swagger/` Documentación Swagger.
-- `http://127.0.0.1:8000/redoc/` Documentación ReDoc.
+| Ruta | Descripción |
+|------|-------------|
+| `http://127.0.0.1:8000/` | Menú principal |
+| `http://127.0.0.1:8000/admin/` | Panel de administración Django |
+| `http://127.0.0.1:8000/gestion/api/` | Endpoints REST |
+| `http://127.0.0.1:8000/swagger/` | Documentación Swagger |
+| `http://127.0.0.1:8000/redoc/` | Documentación ReDoc |
 
-## ☁️ Despliegue y base de datos
+## Base de datos y alcance
 
-Durante el desarrollo se trabajó con PostgreSQL en una etapa previa.  
-Para facilitar la ejecución local y la revisión académica, esta versión del repositorio utiliza **SQLite por defecto**, de modo que puedas probarla rápido y sin configuraciones externas.
+Durante el desarrollo se trabajó con PostgreSQL en una etapa previa. La versión disponible en este repositorio utiliza **SQLite por defecto** para facilitar la ejecución local y la revisión académica.
 
-## 🎯 Contexto académico
+## Contexto académico
 
-Este repositorio conserva una entrega de formación enfocada en backend con Django.  
-El objetivo principal fue aprender fundamentos de desarrollo web, organización de una app MVC de Django y consumo básico de API REST.
-
-## 📌 Resumen
-
-Clínica Vital es una base académica funcional para gestionar datos clínicos esenciales.  
-Es un proyecto **simple y básico**, construido por **Matías Gajardo** en etapa de aprendizaje, y pensado como referencia de progreso en backend.
+Este repositorio conserva una entrega formativa orientada al aprendizaje de fundamentos de desarrollo web con Django, modelado relacional, operaciones CRUD, organización de aplicaciones y consumo básico de API REST.
