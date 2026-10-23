@@ -1,8 +1,27 @@
 # Clínica Vital Service
 
-Aplicación web académica para la gestión de información clínica mediante Django, operaciones CRUD, API REST y documentación interactiva.
+Aplicación web académica para gestionar información clínica mediante Django, operaciones CRUD, API REST y documentación interactiva.
 
 Proyecto desarrollado en **2025** para la **Evaluación 2 de Backend**.
+
+## Estado del proyecto
+
+Implementación académica introductoria orientada a demostrar fundamentos de desarrollo backend con Django, modelado relacional y exposición de datos mediante una API REST.
+
+La versión disponible utiliza SQLite para facilitar la ejecución local y la revisión del proyecto.
+
+## Objetivo
+
+Clínica Vital representa un flujo básico de gestión de información médica. Su propósito es organizar entidades clínicas relacionadas y permitir su administración desde una interfaz web y endpoints REST.
+
+El proyecto se centra en demostrar:
+
+- Creación de modelos relacionales.
+- Uso de formularios Django.
+- Operaciones CRUD.
+- Organización de vistas y rutas.
+- Serialización de datos.
+- Documentación de una API.
 
 ## Autor
 
@@ -10,11 +29,7 @@ Proyecto desarrollado en **2025** para la **Evaluación 2 de Backend**.
 
 Proyecto desarrollado individualmente como parte del proceso formativo en desarrollo backend con Django.
 
-## Descripción del proyecto
-
-Clínica Vital permite administrar información básica de un flujo médico mediante modelos relacionales, formularios, vistas web y endpoints REST.
-
-El sistema gestiona las siguientes entidades:
+## Entidades gestionadas
 
 - Especialidades médicas.
 - Médicos.
@@ -24,16 +39,21 @@ El sistema gestiona las siguientes entidades:
 - Medicamentos.
 - Recetas médicas.
 
-También incorpora documentación automática de la API mediante Swagger y ReDoc.
-
-## Características principales
+## Funcionalidades principales
 
 - Operaciones CRUD desde la interfaz web.
 - Formularios basados en `ModelForm`.
 - Vistas basadas en funciones para listado, creación, edición y eliminación.
-- API REST por entidad mediante `ModelViewSet` y `DefaultRouter`.
-- Documentación de API disponible en Swagger y ReDoc.
+- API REST por entidad mediante `ModelViewSet`.
+- Enrutamiento automático con `DefaultRouter`.
+- Documentación de API mediante Swagger y ReDoc.
 - Organización de una aplicación Django orientada a la gestión de datos clínicos.
+
+## Estructura del proyecto
+
+- `clinica_vital`: configuración principal del proyecto Django.
+- `gestion`: aplicación principal con modelos, formularios, vistas, serializadores y rutas.
+- `gestion/templates/gestion`: plantillas para el menú y las vistas CRUD.
 
 ## Tecnologías
 
@@ -44,12 +64,6 @@ También incorpora documentación automática de la API mediante Swagger y ReDoc
 - HTML, CSS y plantillas Django
 - SQLite para ejecución local
 - PostgreSQL utilizado en una etapa previa del proyecto
-
-## Estructura del proyecto
-
-- `clinica_vital`: configuración principal del proyecto Django.
-- `gestion`: aplicación principal con modelos, formularios, vistas, serializadores y rutas.
-- `gestion/templates/gestion`: plantillas para el menú y las vistas CRUD.
 
 ## Puesta en marcha local
 
@@ -99,6 +113,18 @@ python manage.py runserver
 
 Durante el desarrollo se trabajó con PostgreSQL en una etapa previa. La versión disponible en este repositorio utiliza **SQLite por defecto** para facilitar la ejecución local y la revisión académica.
 
+Este proyecto tiene un alcance introductorio. No corresponde a un sistema clínico listo para producción ni gestiona procesos como autenticación avanzada, agenda médica, fichas clínicas completas, auditoría de cambios, permisos por profesional o protección especializada de datos sensibles.
+
+## Consideraciones para una evolución futura
+
+- Incorporar autenticación y autorización por perfiles.
+- Añadir validaciones específicas para datos clínicos.
+- Implementar agenda y disponibilidad de profesionales.
+- Registrar historial y auditoría de cambios.
+- Reforzar la protección de información personal.
+- Incorporar pruebas automatizadas.
+- Configurar una base de datos y despliegue orientados a producción.
+
 ## Contexto académico
 
-Este repositorio conserva una entrega formativa orientada al aprendizaje de fundamentos de desarrollo web con Django, modelado relacional, operaciones CRUD, organización de aplicaciones y consumo básico de API REST.
+Este repositorio conserva una entrega formativa orientada al aprendizaje de fundamentos de desarrollo web con Django, modelado relacional, operaciones CRUD, organización de aplicaciones y consumo o exposición de servicios REST.
